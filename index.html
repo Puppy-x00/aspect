@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#bdd7ff" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animate.min.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <title>Aspect Ratio Calculator and Checker</title>
+</head>
+
+
+<body>
+    <div id="particles-js">
+        <header> 
+            <nav>
+                <a id="sun"><i class="fas fa-sun fa-3x"></i></a>
+                <a id="moon"><i class="far fa-moon fa-3x"></i></a>
+            </nav>
+        </header>
+        <div id="main-container">
+
+            <!-- ASPECT RATIO CALCULATOR -->
+            <div id="calc-container">
+                <h2>Aspect Ratio Calculator</h2>
+                <div id="selector-container">
+                    <form id="ratio-selector">
+                        <label for="ratio-select">Select an Aspect Ratio : </label>
+                        <select name="ratio-select" id="ratio-select">
+                            <option value="square">1:1</option>
+                            <option value="default">4:3</option>
+                            <option value="wide" selected>16:9</option>
+                            <option value="ultrawide">21:9</option>
+                            <option value="custom">Custom</option>
+                        </select>
+                    </form>
+                    
+                    <div id="custom-ratio-selector">
+                        <form>
+                            <p>Please Enter a custom Aspect Ratio : </p>
+                            <br>
+                            <input type="number" name="custom-width-ratio" id="custom-width-ratio" placeholder="Custom Width" min="1">
+                            <input type="number" name="custom-height-ratio" id="custom-height-ratio" placeholder="Custom Height" min="1">
+                            <div id="custom-buttons">
+                                <a class="btn" id="submit">Submit</a>
+                                <a class="btn" id="reset">Reset</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div id="aspect-result">
+                    <p>Please Enter either Height or Width :</p>
+                    <div id="results">
+                        <div id="result-width">
+                            <input type="number" name="result-width" id="result-width-calculated" placeholder="Width" min="1">
+                            <h4>Width</h4>
+                        </div>
+                        <div id="result-height">
+                            <input type="number" name="result-height" id="result-height-calculated" placeholder="Height" min="1">
+                            <h4>Height</h4>
+                        </div>
+                    </div>
+                    
+    
+                    <div id="result-display">
+                        <div id="result-model">
+                            <h4 id="result-display-width"><span class="calculatedwidth">1600</span></h4>
+                            <h4 id="result-display-height"><span class="calculatedheight">900</span></h4>
+                            <h4 id="aspect-ratio">16 : 9</h4>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+
+            <!-- ASPECT RATIO CHECKER -->
+            <div id="aspect-check-container">
+                <h2>Aspect Ratio Checker</h2>
+                <div id="check-container">
+                    <p>Please Enter both Height and Width :</p>
+                    <div id="aspect-check">
+                        <div id="check-width">
+                            <input type="number" name="check-width" id="check-aspect-width" placeholder="Width" min="1">
+                            <h4>Width</h4>
+                        </div>
+                        <div id="check-height">
+                            <input type="number" name="check-height" id="check-aspect-height" placeholder="Height" min="1">
+                            <h4>Height</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ASPECT CHECKER RESULTS -->
+                <div id="aspect-check-result">
+                    <div id="check-square">
+                        <i class="fas fa-times fa-2x"></i>
+                        <p>Aspect Ratio is - </p><span class="lg-text">1 : 1</span>
+                    </div>
+                    <div id="check-default">
+                        <i class="fas fa-times fa-2x"></i>
+                        <p>Aspect Ratio is - </p><span class="lg-text">4 : 3</span>
+                    </div>
+                    <div id="check-wide">
+                        <i class="fas fa-times fa-2x"></i>
+                        <p>Aspect Ratio is - </p><span class="lg-text">16 : 9</span>
+                    </div>
+                    <div id="check-ultrawide">
+                        <i class="fas fa-times fa-2x"></i>
+                        <p>Aspect Ratio is - </p><span class="lg-text">21 : 9</span>
+                    </div>
+                </div>
+
+            </div> <!--END OF ASPECT RATIO CHECK -->
+
+        </div> <!-- END OF MAIN CONTAINER -->  
+
+    </div> <!-- END OF PARTICLES-JS -->   
+</body>
+    <script src="scripts/all.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
+</html>
+

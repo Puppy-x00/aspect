@@ -1,0 +1,201 @@
+@media only screen and (max-width: 1150px) {
+    
+    #selector-container #custom-ratio-selector{
+        width: 85%;
+    }
+
+    #aspect-result #result-display #result-model{
+        margin-top: 0rem;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #selector-container #custom-ratio-selector{
+        width: 95%;
+    }
+
+    #aspect-result #results{
+        width : 75%;
+    }
+    
+    #check-container #aspect-check{
+        width : 75%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    #selector-container #custom-ratio-selector{
+        width: 100%;
+    }
+
+    #aspect-result #results{
+        width : 95%;
+    }
+    
+    #aspect-result #results #result-display{
+        width : 100%;
+        margin : 1rem 0.5rem;
+    }
+
+    #aspect-result #results #result-width{
+        width : 35%;
+        margin: auto;
+        margin-right: 0.25rem;
+    }
+
+    #aspect-result #results #result-height{
+        width : 35%;
+        margin: auto;
+        margin-left: 0.25rem;
+    }
+
+    #aspect-result #result-display #result-model #result-display-width
+    {
+        font-size: 1.5rem;
+        bottom: -3rem;
+    }
+    
+    #aspect-result #result-display #result-model #result-display-height{
+        font-size: 1.5rem;
+        right: -6.5rem;
+    }
+
+
+    #check-container #aspect-check{
+        width : 85%;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    #particles-js{
+        height: 190vh;
+        overflow: scroll;
+    }
+
+
+    #main-container{
+        grid-template-columns: none;
+        grid-template-rows: 0.9fr 1fr;
+    }
+
+    #main-container #calc-container, 
+    #main-container #aspect-check-container{
+        width: 60%;
+        margin: 4rem auto 2rem auto;
+    }
+
+    #main-container #aspect-check-container{
+        margin-top: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    #selector-container #custom-ratio-selector{
+        width: 75%;
+    }
+
+    #selector-container #custom-ratio-selector input::placeholder{
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    #selector-container #custom-ratio-selector a{
+        width : 30%;
+    }
+
+    #aspect-result #results{
+        width : 65%;
+    }
+
+    #aspect-result #results input::placeholder {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+
+    #check-container #aspect-check{
+        width : 50%;
+    }
+
+    #check-container #aspect-check input::placeholder{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 750px) {
+    
+    #main-container #calc-container, 
+    #main-container #aspect-check-container{
+        width: 80%;
+        margin: 4rem auto 2rem auto;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    
+    #main-container #calc-container, 
+    #main-container #aspect-check-container{
+        width: 90%;
+        margin: 5rem auto 2rem auto;
+    }
+
+    #main-container #calc-container #custom-ratio-selector{
+        width: 95%;
+    }
+
+    #selector-container #custom-ratio-selector input{
+        width: 40%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #aspect-result #results input {
+        width: 50%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    
+    #check-container #aspect-check input{
+        width: 40%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    #aspect-result #result-display #result-model{
+        transform: scale(0.8);
+    } 
+    
+
+}
+
+@media only screen and (max-width: 500px) {
+    
+    html{
+        font-size: 9px;
+    }
+
+
+    #selector-container #custom-ratio-selector input::placeholder{
+        font-size: 1.15rem;
+        text-align: center;
+    }
+
+    #aspect-result #results input::placeholder {
+        font-size: 1.15rem;
+        text-align: center;
+    }
+
+    #check-container #aspect-check input::placeholder{
+        font-size: 1.15rem;
+        text-align: center;
+    }
+}
+
+
