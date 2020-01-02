@@ -189,7 +189,7 @@ function mouseLeave(e){
 
 // This function calculates the Height, when the Width is being provided by the user.
 function calculateHeight(){
-    if(resultWidthCalculated.value !== ''){ //Ensures that the Width value is not supplied as empty
+    if(resultWidthCalculated.value !== '' && resultWidthCalculated.value > 0 ){ //Ensures that the Width value is not supplied as empty
         if(ratioSelector.value === 'square'){
             resultHeightCalculated.value = parseFloat(resultWidthCalculated.value);
             resultDisplayWidth.textContent = parseFloat(resultWidthCalculated.value).toFixed(2);
@@ -244,7 +244,7 @@ function calculateHeight(){
 
 
 function calculateWidth(){
-    if(resultHeightCalculated.value !== ''){ //Ensures that the Height value is not supplied as empty
+    if(resultHeightCalculated.value !== '' && resultHeightCalculated.value > 0){ //Ensures that the Height value is not supplied as empty
         if(ratioSelector.value === 'square'){
             resultWidthCalculated.value = parseFloat(resultHeightCalculated.value);
             resultDisplayWidth.textContent = parseFloat(resultWidthCalculated.value).toFixed(2);
