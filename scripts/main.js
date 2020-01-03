@@ -318,7 +318,7 @@ function checkDimensionsAndRatio(){
             removeBordersAndClassNamesFromAspectRatios();
             makeAllCrossMarks();
             checkSquare.style.border = '2px solid green';
-            checkSquare.children[0].setAttribute('data-icon','check');
+            checkSquare.children[0].className="fas fa-check fa-2x";
             console.log('The supplied Aspect Ratio is 1 : 1.');
         }
         // For 4:3 Resolution
@@ -326,7 +326,7 @@ function checkDimensionsAndRatio(){
             removeBordersAndClassNamesFromAspectRatios();
             makeAllCrossMarks();
             checkDefault.style.border = '2px solid green';
-            checkDefault.children[0].setAttribute('data-icon','check');
+            checkDefault.children[0].className="fas fa-check fa-2x";
             console.log('The supplied Aspect Ratio is 4 : 3.');
         }
         // For 16:9 Resolution
@@ -334,7 +334,7 @@ function checkDimensionsAndRatio(){
             removeBordersAndClassNamesFromAspectRatios();
             makeAllCrossMarks();
             checkWide.style.border = '2px solid green';
-            checkWide.children[0].setAttribute('data-icon','check');
+            checkWide.children[0].className="fas fa-check fa-2x";
             console.log('The supplied Aspect Ratio is 16 : 9.');
         }
         // For 21:9 Resolution
@@ -342,7 +342,7 @@ function checkDimensionsAndRatio(){
             removeBordersAndClassNamesFromAspectRatios();
             makeAllCrossMarks();
             checkUltraWide.style.border = '2px solid green';
-            checkUltraWide.children[0].setAttribute('data-icon','check');
+            checkUltraWide.children[0].className="fas fa-check fa-2x";
             console.log('The supplied Aspect Ratio is 21 : 9.');
         }
         else{
@@ -374,10 +374,10 @@ function removeBordersAndClassNamesFromAspectRatios(){
 
 // Replaces all the icons before the 'Aspect Ratio is-' text with 'X' icons.
 function makeAllCrossMarks(){
-    checkSquare.children[0].setAttribute('data-icon','times');
-    checkDefault.children[0].setAttribute('data-icon','times');
-    checkWide.children[0].setAttribute('data-icon','times');
-    checkUltraWide.children[0].setAttribute('data-icon','times');
+    checkSquare.children[0].className="fas fa-times fa-2x";
+    checkDefault.children[0].className="fas fa-times fa-2x";
+    checkWide.children[0].className="fas fa-times fa-2x";
+    checkUltraWide.children[0].className="fas fa-times fa-2x";
 }
 
 // Logic for stylizing the web-page according to Light Mode
