@@ -15,10 +15,10 @@
 Enter both Height and Width in the inputs, to see if the Aspect Ratio is any of the following : 1:1, 4:3, 16:9, 21:9.
 
 
-**Animate.CSS** was used for Animations
+**Animate.CSS** was used for Animations.
 
-**Particles.JS** was used for Particles Effect
+**Particles.JS** was used for Particles Effect.
 
-**FontAwesome** was used for Icons
+**Icons8** was used for Icons.
 
 **Note:** Application is responsive, and supports light and dark modes.

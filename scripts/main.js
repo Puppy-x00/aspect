@@ -2,7 +2,9 @@
 let sun = document.querySelector('#sun'),
     moon = document.querySelector('#moon');
 
-let ratioSelector = document.querySelector('#ratio-select'),
+let calcContainer = document.querySelector('#calc-container'),
+    aspectCheckContainer = document.querySelector('#aspect-check-container'),
+    ratioSelector = document.querySelector('#ratio-select'),
     customRatioForm = document.querySelector('#custom-ratio-selector'),
     customWidthRatio = document.querySelector('#custom-width-ratio'),
     customHeightRatio = document.querySelector('#custom-height-ratio'),
@@ -29,6 +31,10 @@ let checkAspectWidth = document.querySelector('#check-aspect-width'),
 (function loadEventListeners(){
     sun.addEventListener('click', lightMode);
     moon.addEventListener('click', nightMode);
+    customHeightRatio.addEventListener('keyup', clearOnNegative);
+    customWidthRatio.addEventListener('keyup', clearOnNegative);
+    checkAspectWidth.addEventListener('keyup', clearOnNegative);
+    checkAspectHeight.addEventListener('keyup', clearOnNegative);
     ratioSelector.addEventListener('change', ratioChanged);
     submit.addEventListener('click', customRatioInitiator);
     reset.addEventListener('click', resetAll);
@@ -104,13 +110,20 @@ function ratioChanged(){
     }
 }
 
+// This clears the inputs if a negative value is entered
+function clearOnNegative(e){
+    if(e.target.value <=0){
+        e.target.value = '';
+    }
+}
+
 // This runs whenever a user enters a Custom Aspect Ratio and submits.
 // This function stylizes the Aspect Ratio Preview box according to the given Custom Aspect Ratio
 function customRatioInitiator(){
     if(customWidthRatio.value === '' || customHeightRatio.value === ''){
         alert('Please enter both Custom Width and Custom Ratio.');
     }
-    else{
+    else if(customWidthRatio.value > 0 && customHeightRatio.value > 0) {
         let calcWidth, calcHeight;
         calcWidth = customWidthRatio.value*75;
         calcHeight = customHeightRatio.value*75;
@@ -385,6 +398,10 @@ function light(){
     console.log('Running Light mode');
     document.querySelector('html').style.color = '#333';
 
+    //Styling Containers
+    calcContainer.style.boxShadow = '0px 0px 58px -15px rgba(0,0,0,0.75)';
+    aspectCheckContainer.style.boxShadow = '0px 0px 58px -15px rgba(0,0,0,0.75)';
+
     // Styling Buttons
     let buttons = document.querySelectorAll('.btn');
     buttons.forEach(function(item){
@@ -417,6 +434,10 @@ function light(){
 function night(){
     console.log('Running Night mode');
     document.querySelector('html').style.color = '#ccc';
+
+    //Styling Containers
+    calcContainer.style.boxShadow = '0px 0px 58px -15px rgba(14,140,180,0.5)';
+    aspectCheckContainer.style.boxShadow = '0px 0px 58px -15px rgba(14,140,180,0.5)';
 
     // Styling Buttons
     let buttons = document.querySelectorAll('.btn');
